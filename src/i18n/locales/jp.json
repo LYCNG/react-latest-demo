@@ -1,0 +1,16 @@
+{
+  "language": "日本語",
+  "greeting": "こんにちは",
+  "welcome": "私たちのアプリケーションへようこそ",
+  "loginPage": {
+    "title": "ログイン",
+    "account": "アカウント",
+    "enter.account": "アカウントを入力",
+    "password": "パスワード",
+    "enter.password": "パスワードを入力",
+    "login": "ログイン"
+  },
+  "footer": {
+    "framework": "フレームワーク"
+  }
+}

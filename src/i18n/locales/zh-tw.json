@@ -1,0 +1,16 @@
+{
+  "language": "繁體中文",
+  "greeting": "你好",
+  "welcome": "歡迎使用我們的應用程式",
+  "loginPage": {
+    "title": "登入",
+    "account": "帳號",
+    "enter.account": "輸入帳號",
+    "password": "密碼",
+    "enter.password": "輸入密碼",
+    "login": "登入"
+  },
+  "footer": {
+    "framework": "框架"
+  }
+}

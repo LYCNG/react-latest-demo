@@ -7,6 +7,11 @@ export default defineConfig({
   optimizeDeps: {
     include: ["framer-motion.js"],
   },
+  resolve: {
+    alias: {
+      "@i18n": "/src/i18n",
+    },
+  },
   server: {
     port: 5678,
     host: "0.0.0.0",

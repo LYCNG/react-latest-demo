@@ -1,0 +1,16 @@
+{
+  "language": "English",
+  "greeting": "Hello",
+  "welcome": "Welcome to our application",
+  "loginPage": {
+    "title":"login",
+    "account": "Account",
+    "enter.account": "Enter Account",
+    "password": "Password",
+    "enter.password": "Enter Password",
+    "login":"login"
+  },
+  "footer":{
+    "framework":"Framework"
+  }
+}
