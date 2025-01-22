@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { IoIosColorPalette } from "react-icons/io";
 import { themes } from "../constant/themes";
 
 const themeStorage = import.meta.env.VITE_APP_THEME_STORAGE;
@@ -16,12 +17,17 @@ const ThemeButton = () => {
 
   return (
     <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn m-1 btn-md text-lg">
-        Theme
+      <div
+        tabIndex={0}
+        role="button"
+        className="btn m-1 btn-md text-lg btn-ghost"
+      >
+        <IoIosColorPalette className=" text-xl md:hidden" />
+        <section className="hidden md:inline">Theme</section>
         <svg
           width="12px"
           height="12px"
-          className="inline-block h-3 w-3 fill-current opacity-60"
+          className="hidden md:inline-block h-3 w-3 fill-current opacity-60 "
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 2048 2048"
         >

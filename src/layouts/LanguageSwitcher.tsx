@@ -10,12 +10,16 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn m-1 btn-md text-lg">
+      <div
+        tabIndex={0}
+        role="button"
+        className="btn-ghost btn m-1 btn-md text-lg "
+      >
         <IoLanguage />
         <svg
           width="12px"
           height="12px"
-          className="inline-block h-3 w-3 fill-current opacity-60"
+          className="hidden md:inline-block h-3 w-3 fill-current opacity-60 "
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 2048 2048"
         >
