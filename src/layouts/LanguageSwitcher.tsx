@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { IoLanguage } from "react-icons/io5";
+import { lngList } from "../constant/lng";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -9,7 +10,7 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="dropdown dropdown-end">
+    <div className="dropdown dropdown-end ">
       <div
         tabIndex={0}
         role="button"
@@ -30,33 +31,17 @@ const LanguageSwitcher = () => {
         tabIndex={0}
         className="dropdown-content bg-base-300 rounded-box z-[1] p-2 shadow-2xl text-base-content w-32"
       >
-        <li>
-          <input
-            onClick={() => changeLanguage("en")}
-            type="radio"
-            name="theme-dropdown"
-            className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-            aria-label={"English"}
-          />
-        </li>
-        <li>
-          <input
-            onClick={() => changeLanguage("zh-tw")}
-            type="radio"
-            name="theme-dropdown"
-            className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-            aria-label={"繁體中文"}
-          />
-        </li>
-        <li>
-          <input
-            onClick={() => changeLanguage("jp")}
-            type="radio"
-            name="theme-dropdown"
-            className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-            aria-label={"日本語"}
-          />
-        </li>
+        {lngList.map((lng) => (
+          <li>
+            <input
+              onClick={() => changeLanguage(lng.code)}
+              type="radio"
+              name="theme-dropdown"
+              className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+              aria-label={lng.name}
+            />
+          </li>
+        ))}
       </ul>
     </div>
   );

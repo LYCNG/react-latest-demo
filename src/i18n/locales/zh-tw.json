@@ -3,7 +3,7 @@
   "greeting": "你好",
   "welcome": "歡迎使用我們的應用程式",
   "loginPage": {
-    "title": "登入",
+    "title": "使用者登入",
     "account": "帳號",
     "enter.account": "輸入帳號",
     "password": "密碼",
@@ -12,5 +12,9 @@
   },
   "footer": {
     "framework": "框架"
+  },
+  "loginStatus":{
+  "success": "登入成功。",
+  "failed": "登入失敗。"
   }
 }

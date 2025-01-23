@@ -11,7 +11,7 @@ export default {
   daisyui: {
     themes: [
       "lofi",
-      ,
+
       "coffee",
       "winter",
       "halloween",

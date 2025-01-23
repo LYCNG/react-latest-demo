@@ -17,7 +17,7 @@ const LoginPage = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full p-6 m-auto bg-white rounded-md shadow-md ring-2 ring-gray-800/50 lg:max-w-lg">
+    <div className="w-full  md:h-auto  p-12 m-auto bg-none md:bg-white rounded-md md:shadow-md md:ring-2 ring-gray-800/50 lg:max-w-lg">
       <h1 className="text-3xl font-semibold text-center text-gray-700">
         {title} - {t("loginPage.title")}
       </h1>

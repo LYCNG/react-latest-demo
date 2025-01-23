@@ -13,8 +13,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import AuthUserProvider from "./contexts/authContext.tsx";
-import GridThemeProvider from "./contexts/gridThemeContext.tsx";
+import AppProvider from "./contexts/index.tsx";
 import "./i18n/i18n.ts"; // 導入 i18n 配置
 
 const queryClient = new QueryClient();
@@ -24,11 +23,9 @@ createRoot(document.getElementById("root")!).render(
     <ToastContainer autoClose={3000} />
     <BrowserRouter basename="/">
       <QueryClientProvider client={queryClient}>
-        <AuthUserProvider>
-          <GridThemeProvider>
-            <App />
-          </GridThemeProvider>
-        </AuthUserProvider>
+        <AppProvider>
+          <App />
+        </AppProvider>
       </QueryClientProvider>
     </BrowserRouter>
   </StrictMode>

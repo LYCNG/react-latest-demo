@@ -3,7 +3,7 @@
   "greeting": "こんにちは",
   "welcome": "私たちのアプリケーションへようこそ",
   "loginPage": {
-    "title": "ログイン",
+    "title": "ユーザ ログイン",
     "account": "アカウント",
     "enter.account": "アカウントを入力",
     "password": "パスワード",
@@ -12,5 +12,9 @@
   },
   "footer": {
     "framework": "フレームワーク"
+  },
+  "loginStatus": {
+    "success": "ログインに成功しました。",
+    "failed": "ログインに失敗しました。"
   }
 }

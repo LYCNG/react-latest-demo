@@ -3,7 +3,7 @@
   "greeting": "Hello",
   "welcome": "Welcome to our application",
   "loginPage": {
-    "title":"login",
+    "title":"Login",
     "account": "Account",
     "enter.account": "Enter Account",
     "password": "Password",
@@ -12,5 +12,9 @@
   },
   "footer":{
     "framework":"Framework"
+  },
+  "loginStatus":{
+    "success":"Login success.",
+    "failed":"Login failed."
   }
 }

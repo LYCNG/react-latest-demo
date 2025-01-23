@@ -1,19 +1,9 @@
-import { useEffect, useState } from "react";
 import { IoIosColorPalette } from "react-icons/io";
 import { themes } from "../constant/themes";
-
-const themeStorage = import.meta.env.VITE_APP_THEME_STORAGE;
+import { useTheme } from "../hooks/useTheme";
 
 const ThemeButton = () => {
-  const [theme, setTheme] = useState(() => {
-    // 從 localStorage 讀取主題
-    return localStorage.getItem(themeStorage) || "light";
-  });
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem(themeStorage, theme); // 將主題存入 localStorage
-  }, [theme]);
+  const { setTheme } = useTheme();
 
   return (
     <div className="dropdown dropdown-end">
