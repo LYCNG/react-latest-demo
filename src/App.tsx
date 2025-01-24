@@ -10,8 +10,9 @@ function App() {
   return (
     <div className="relative flex flex-col justify-center h-screen overflow-hidden">
       <Navbar />
-
-      <Router location={location} />
+      <div className="m-auto w-full mt-24">
+        <Router location={location} />
+      </div>
 
       <Footer />
     </div>

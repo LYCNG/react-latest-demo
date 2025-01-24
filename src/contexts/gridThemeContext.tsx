@@ -1,36 +1,36 @@
-import { createContext, useEffect, useState } from "react";
+import { Theme } from "ag-grid-community";
+import { createContext, useMemo, useState } from "react";
+import { gridThemes, gridThemesDark } from "../constant/gridTheme";
 
 type GridThemeContextType = {
-  theme: string;
-  gridMode: string;
+  theme: { id: string; theme: Theme };
+  changeTheme: (themeId: string) => void;
   dark: boolean;
-  toggleDark: () => void;
-  toggleTheme: (theme: string) => void;
+  setDark: (param: boolean) => void;
 };
-
-const defaultTheme = "ag-theme-quartz";
 
 export const GridThemeContext = createContext<GridThemeContextType | undefined>(
   undefined
 );
 
 const GridThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState(defaultTheme);
-  const [gridMode, setGridMode] = useState(defaultTheme);
+  const [themeId, setThemeId] = useState("themeQuartz");
+
   const [dark, setDark] = useState(false);
 
-  const toggleTheme = (mode: string) => setGridMode(mode);
-  const toggleDark = () => setDark((pre) => !pre);
+  const changeTheme = (themeId: string) => {
+    setThemeId(themeId);
+  };
 
-  useEffect(() => {
-    const newTheme = gridMode + (dark ? "-dark" : "");
-    setTheme(newTheme);
-  }, [dark, gridMode]);
+  const theme = useMemo(() => {
+    return (
+      (dark ? gridThemesDark : gridThemes).find((t) => t?.id === themeId) ||
+      gridThemes[0]
+    );
+  }, [themeId, dark]);
 
   return (
-    <GridThemeContext.Provider
-      value={{ theme, gridMode, dark, toggleDark, toggleTheme }}
-    >
+    <GridThemeContext.Provider value={{ theme, changeTheme, dark, setDark }}>
       {children}
     </GridThemeContext.Provider>
   );
