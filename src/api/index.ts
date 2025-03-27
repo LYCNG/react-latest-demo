@@ -32,4 +32,23 @@ axiosApi.interceptors.request.use(
     return Promise.reject(error);
   }
 );
+
+axiosApi.interceptors.response.use(
+  (response) => {
+    // ✅ 確保 `useQuery` 直接獲取 `response.data`
+    return response;
+  },
+  (error) => {
+    console.error("API Response Error Happened:", error);
+    if (error.response) {
+      const { data } = error.response;
+
+      // 🔴 統一返回 API 錯誤
+      return Promise.reject(data);
+    }
+
+    return Promise.reject(error);
+  }
+);
+
 export default axiosApi;

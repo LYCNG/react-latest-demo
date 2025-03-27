@@ -20,7 +20,13 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ToastContainer autoClose={3000} />
+    <ToastContainer
+      autoClose={3000}
+      limit={5}
+      style={{ zIndex: 1000 }}
+      pauseOnHover={true}
+      pauseOnFocusLoss={false}
+    />
     <BrowserRouter basename="/">
       <QueryClientProvider client={queryClient}>
         <AppProvider>
